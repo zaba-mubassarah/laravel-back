@@ -40,6 +40,9 @@ class userLoginController extends Controller
                 echo $request->password;
                return redirect()->to('/prescription-view'); 
         }
+        else{
+            return redirect()->to('/users-login');
+        }
     }
 
     /**
