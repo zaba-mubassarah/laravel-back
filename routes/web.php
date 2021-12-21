@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PrescriptionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'about@about');
+Route::get('/prescription-view', function(){
+    return view('prescription');
+});
 Route::apiResource('/flights', 'flightsController');
 Route::apiResource('/user', 'userController');
+Route::apiResource('/prescription', 'PrescriptionController');
