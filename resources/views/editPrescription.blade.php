@@ -1,21 +1,4 @@
-<!-- <form action="{{url('/prescription')}}" method="post">
-  <label for="fname">Prescription Date:</label>
-  <input type="text" id="fname" name="prescription_date"><br><br>
-  <label for="lname">Patient Name:</label>
-  <input type="text" id="lname" name="patient_name"><br><br>
-  <label for="lname">Patient Age:</label>
-  <input type="text" id="lname" name="patient_age"><br><br>
-  <label for="lname">Gender:</label>
-  <input type="text" id="lname" name="gender"><br><br>
-  <label for="lname">Diagnosis:</label>
-  <input type="text" id="lname" name="diagonsis"><br><br>
-  <label for="lname">Medicine:</label>
-  <input type="text" id="lname" name="medicine"><br><br>
-   <label for="lname">next_visit_date:</label>
-  <input type="text" id="lname" name="next_visit_date"><br><br>
-  <input type="submit" value="Submit">
- 
-</form> -->
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
   <title></title>
@@ -95,6 +78,11 @@
   <br>
   <input name="submit" value="Generate Prescription" type="submit">&nbsp; &nbsp; <input name="reset" value="RESET" type="reset"> <big><big><br>
   </big></big></form>
+  <form method="post" action="{{ route('prescription.destroy', ($data->id)) }}">
+
+        {{ method_field("PUT") }}
+        <button class="btn btn-danger btn-xs pull-left"> Update</button>
+      </form>
 
 </body>
 </html>
