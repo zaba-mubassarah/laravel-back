@@ -38,10 +38,10 @@ class userLoginController extends Controller
         if ($request->name == "anin" && $request->password = 123456) {
                 echo $request->name;
                 echo $request->password;
-               return redirect()->to('/prescription-view'); 
+               return redirect()->to('/prescription'); 
         }
         else{
-            return redirect()->to('/users-login');
+            return redirect()->to('/');
         }
     }
 

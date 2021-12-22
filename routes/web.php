@@ -16,7 +16,7 @@ use App\Http\Controllers\userLoginController;
 |
 */
 
-Route::get('/', 'about@about');
+// Route::get('/', 'about@about');
 Route::get('/prescription-view', function(){
     return view('prescription');
 });
@@ -33,6 +33,10 @@ Route::get('/anin-view', function(){
 Route::get('/login-view', function(){
     return view('login');
 });
-Route::get('/users-login', function(){
+
+Route::get('/', function(){
     return view('userLogin');
 });
+// Route::get('/prescription', function(){
+//     return view('prescriptionList');
+// });

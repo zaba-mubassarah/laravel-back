@@ -13,9 +13,15 @@ class PrescriptionController extends Controller
      */
     public function index()
     {
-       echo "I'm about to learn PHP!<br>";
-       $list = prescription::all();
-        return $list;
+       
+       $lists = prescription::all();
+       // echo $list;
+       return view("prescriptionList",compact('lists'));
+       // return view('prescriptionList');
+       // return view('prescriptionList',compact($list));
+       // return View::make("prescriptionList")->with(array('list'=>$list));
+       // return View::make("user/regprofile", compact('students'));
+        // return $list;
     }
 
     /**
@@ -90,6 +96,7 @@ class PrescriptionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = prescription::find($id);
+        $data->delete();
     }
 }
