@@ -62,7 +62,9 @@ class PrescriptionController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = prescription::find($id);
+        echo  $data;
+        return view("editPrescription",compact('data'));
     }
 
     /**
@@ -84,8 +86,9 @@ class PrescriptionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+    { 
+        
+       
     }
 
     /**
