@@ -63,7 +63,7 @@ class PrescriptionController extends Controller
     public function show($id)
     {
         $data = prescription::find($id);
-        echo  $data;
+        // echo  $data;
         return view("editPrescription",compact('data'));
     }
 
@@ -88,7 +88,16 @@ class PrescriptionController extends Controller
     public function update(Request $request, $id)
     { 
         echo  "yes put called";
-       
+        // $prescription = $request->all();
+        $prescription = prescription::find($id);
+        $prescription->prescription_date=$request->prescription_date;
+        $prescription->patient_name=$request->patient_name;
+        $prescription->patient_age=$request->patient_age;
+        $prescription->diagonsis=$request->diagonsis;
+        $prescription->gender=$request->gender;
+        $prescription->medicine=$request->medicine;
+        $prescription->next_visit_date=$request->next_visit_date;
+        $prescription->save();
     }
 
     /**

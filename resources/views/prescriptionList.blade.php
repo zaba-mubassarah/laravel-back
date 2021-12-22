@@ -11,6 +11,7 @@ table, th, td {
 <h2>Prescription List</h2>
 
 <table style="width:100%">
+  <button><a href="/prescription-view">add</a></button>
   <tr>
     <th>Prescription Date</th>
     <th>Patient Name</th>
