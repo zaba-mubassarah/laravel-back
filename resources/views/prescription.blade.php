@@ -27,7 +27,8 @@
 
 <br>
 
-<form method="post" action="{{url('/prescription')}}"><big><big>PRESCRIPTION :<br>
+<form method="post" action="{{url('/prescription')}}"><big><big>PRESCRIPTION : <button><a href="/prescription" style="padding:10px;">Back to List</a></button><br>
+
   <br>
   </big></big>
   <table width:="50%">

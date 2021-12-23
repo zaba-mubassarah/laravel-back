@@ -10,7 +10,7 @@
 
 <br>
 
-<form method="post" action="{{url('/prescription')}}"><big><big>PRESCRIPTION Edit:
+<form method="post" action="{{url('/prescription')}}"><big><big>PRESCRIPTION Edit:<button><a href="/prescription" style="padding:10px;">Back to List</a></button>
   </form>
   <form method="post" action="{{ route('prescription.update', ($data->id)) }}">
 <br>

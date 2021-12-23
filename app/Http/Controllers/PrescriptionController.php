@@ -51,7 +51,8 @@ class PrescriptionController extends Controller
         $prescription->medicine=$request->medicine;
         $prescription->next_visit_date=$request->next_visit_date;
         $prescription->save();
-      
+        $lists = prescription::all();
+        return view("prescriptionList",compact('lists'));
     }
 
     /**
@@ -87,7 +88,7 @@ class PrescriptionController extends Controller
      */
     public function update(Request $request, $id)
     { 
-        echo  "yes put called";
+     
         // $prescription = $request->all();
         $prescription = prescription::find($id);
         $prescription->prescription_date=$request->prescription_date;
@@ -98,6 +99,8 @@ class PrescriptionController extends Controller
         $prescription->medicine=$request->medicine;
         $prescription->next_visit_date=$request->next_visit_date;
         $prescription->save();
+        $lists = prescription::all();
+        return view("prescriptionList",compact('lists'));
     }
 
     /**
@@ -110,5 +113,7 @@ class PrescriptionController extends Controller
     {
         $data = prescription::find($id);
         $data->delete();
+        $lists = prescription::all();
+        return view("prescriptionList",compact('lists'));
     }
 }
